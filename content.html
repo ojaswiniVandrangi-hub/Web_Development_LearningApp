@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTML Basics - Web Development</title>
+<style id="dynamic-style"></style>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f0f4f8;
+        color: #333;
+        line-height: 1.6;
+    }
+    h1, h2 {
+        color: #2c3e50;
+    }
+    .highlight {
+        color: #e67e22;
+        font-weight: bold;
+    }
+    code {
+        background-color: #f5f5f5;
+        padding: 2px 6px;
+        border-radius: 4px;
+        display: inline-block;
+    }
+    .section {
+        margin-top: 30px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .next-button, .btn-group button {
+        display: inline-block;
+        margin: 10px 5px 0 0;
+        padding: 12px 20px;
+        background-color: #3498db;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+    .next-button:hover, .btn-group button:hover {
+        background-color: #2980b9;
+        transform: scale(1.05);
+    }
+    a.mdn-link {
+        color: #3498db;
+        text-decoration: none;
+    }
+    a.mdn-link:hover {
+        text-decoration: underline;
+    }
+</style>
+
+</head>
+<body>
+
+<h1>📘 HTML Basics - Web Development</h1>
+
+<div class="section">
+    <h2>🌐 What is World Wide Web (WWW)?</h2>
+    <p>The <strong>World Wide Web (WWW)</strong> is like a giant digital library where websites, videos, apps, and resources live. We access them through browsers using the internet.</p>
+    <p><em>Real-life Example:</em> Every time you search on Google or watch YouTube, you're interacting with the WWW.</p>
+    <p><strong>Quick Fact:</strong> Simply writing code on your laptop isn't enough. You need to publish it to the WWW so others can access your page.</p>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Glossary/World_Wide_Web" class="mdn-link" target="_blank">Learn more about WWW (MDN Docs)</a></p>
+</div>
+
+<div class="section">
+    <h2>🔧 Introduction to HTML</h2>
+    <p><strong>HTML</strong> (HyperText Markup Language) structures web pages using tags, similar to highlighting important content in textbooks.</p>
+    <p><em>Real-life Example:</em> Building a house — HTML provides the walls, rooms, and structure before adding paint (CSS) or electricity (JS).</p>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" class="mdn-link" target="_blank">Learn more about HTML (MDN Docs)</a></p>
+</div>
+
+<div class="section">
+    <h2>💡 Live Demo: HTML vs HTML+CSS vs HTML+CSS+JS</h2>
+    <div class="btn-group">
+        <button onclick="showHTML()">Only HTML</button>
+        <button onclick="showCSS()">HTML + CSS</button>
+        <button onclick="showJS()">HTML + CSS + JS</button>
+    </div>
+    <div id="demo-area" class="section"></div>
+    <p><strong>Only HTML:</strong> Plain structure, no styles.<br>
+    <strong>HTML + CSS:</strong> Adds colors, fonts, styles.<br>
+    <strong>HTML + CSS + JS:</strong> Adds interactive behavior (clickable button).</p>
+</div>
+
+<div class="section">
+    <h2>🔤 HTML Elements and Attributes</h2>
+    
+    <p><strong>Elements</strong> are the fundamental building blocks of a webpage. They define the structure, layout, and content of a website. <strong>Attributes</strong> provide extra information or control the behavior of those elements.</p>
+    
+    <p>An HTML element consists of a start tag, content, and an end tag. Elements represent different parts of a webpage such as headings, paragraphs, images, links, lists, forms, and much more. There are over 100 standard HTML elements available.</p>
+    
+    <p>All HTML elements can have attributes. Just like people have specifications such as height, color, or profession, HTML elements can be described or modified using attributes.</p>
+    
+    <p>Attributes provide additional details about elements. They are always included in the opening tag and usually follow a <strong>name="value"</strong> pattern.</p>
+    
+    <p><em>Real-life Example:</em> Think of a car as an element — its color, brand, and model are like attributes that describe the car in more detail.</p>
+    
+    <p><strong>Example of an element with attributes:</strong><br>
+    <code>&lt;a href="https://google.com"&gt;Visit Google&lt;/a&gt;</code></p>
+    
+    <p>In the above example, <code>href="https://google.com"</code> is the attribute, where <strong>href</strong> is the name of the attribute and <strong>https://google.com</strong> is the value.</p>
+    
+    <p>
+        🔗 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" class="mdn-link" target="_blank">
+        Explore all HTML Elements on MDN</a>
+    </p>
+</div>
+
+
+
+<div class="section">
+    <h2>💬 HTML Comments</h2>
+    <p>Comments describe your code but don't show on the website.</p>
+    <p><em>Imagine you're writing a recipe in a notebook, and you add personal notes like "Mom's favorite dish" or "Use less salt if needed" — these notes are for your reference only and aren't part of the final dish itself. Similarly, HTML comments are for the developer's reference and aren't visible to the website user.</p>
+    <p>Example: <code>&lt;!-- This is a comment --&gt;</code></p>
+</div>
+
+<div class="section">
+    <h2>🅱️ Strong, Bold, Emphasis, Italic Elements</h2>
+
+    <ul>
+        <li>
+            <strong>&lt;b&gt; - Bold (for style only)</strong><br>
+            <em>Real-life Example:</em> Posters or advertisements where certain words pop out just visually.<br>
+            <strong>Code:</strong> <code>&lt;b&gt;Special Offer!&lt;/b&gt;</code><br>
+            <strong>Output:</strong> <b>Special Offer!</b>
+        </li>
+        <br>
+        <li>
+            <strong>&lt;strong&gt; - Important Bold Text</strong><br>
+            <em>Real-life Example:</em> Medicine labels or emergency signs like "Warning!". This also informs screen readers it's important.<br>
+            <strong>Code:</strong> <code>&lt;strong&gt;Caution: High Voltage&lt;/strong&gt;</code><br>
+            <strong>Output:</strong> <strong>Caution: High Voltage</strong>
+        </li>
+        <br>
+        <li>
+            <strong>&lt;i&gt; - Italic (for style)</strong><br>
+            <em>Real-life Example:</em> Book titles, movie names, or foreign language words shown in italics.<br>
+            <strong>Code:</strong> <code>&lt;i&gt;The Great Gatsby&lt;/i&gt;</code><br>
+            <strong>Output:</strong> <i>The Great Gatsby</i>
+        </li>
+        <br>
+        <li>
+            <strong>&lt;em&gt; - Emphasized Text (Italic + Meaning)</strong><br>
+            <em>Real-life Example:</em> A teacher saying "Please <em>remember</em> this point!" with stress. Screen readers emphasize this text.<br>
+            <strong>Code:</strong> <code>&lt;em&gt;This is very important&lt;/em&gt;</code><br>
+            <strong>Output:</strong> <em>This is very important</em>
+        </li>
+    </ul>
+
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" class="mdn-link" target="_blank">Explore all HTML Text Elements on MDN</a></p>
+</div>
+
+
+
+<div class="section">
+    <h2>🧩 Nesting Elements</h2>
+
+    <p>
+        <strong>Nesting</strong> means placing elements inside other elements to build a structured web page, just like boxes inside boxes or containers inside containers.
+    </p>
+
+    <p>
+        The most basic structure of any HTML page uses nesting. Here's a perfect example:
+    </p>
+
+    <pre><code>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Webpage&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;h1&gt;Welcome to my site&lt;/h1&gt;
+        &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+
+    <p>
+        In the above example:
+        <ul>
+            <li>The <code>&lt;html&gt;</code> element is the parent that wraps everything.</li>
+            <li>Inside <code>&lt;html&gt;</code>, we have two nested elements — <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code>.</li>
+            <li>Further inside <code>&lt;head&gt;</code>, the <code>&lt;title&gt;</code> is nested.</li>
+            <li>Inside <code>&lt;body&gt;</code>, we nest other elements like <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code>.</li>
+        </ul>
+    </p>
+
+    <p><em>Real-life Example:</em> Think of a tiffin box. The large box holds smaller containers inside it — rice in one, curry in another. Similarly, HTML elements sit inside parent elements to stay organized.</p>
+
+    <p>
+        Nesting helps maintain structure, hierarchy, and clarity in your webpage. Incorrect nesting can break your layout!
+    </p>
+
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" class="mdn-link" target="_blank">Explore HTML Structure on MDN</a></p>
+</div>
+
+
+<div class="section">
+    <h2>🔢 Superscript and Subscript</h2>
+
+    <p>
+        <strong>Superscript:</strong> Text that appears slightly above the normal line, often used for exponents, mathematical formulas, or footnotes.
+    </p>
+
+    <p>
+        <strong>Subscript:</strong> Text that appears slightly below the normal line, commonly used in chemical formulas or technical notations.
+    </p>
+
+    <p><em>Real-life Examples:</em></p>
+    <ul>
+        <li>Water formula → H<sub>2</sub>O</li>
+        <li>Carbon dioxide → CO<sub>2</sub></li>
+        <li>Mathematical exponent → 5<sup>2</sup> = 25</li>
+        <li>Chemical expression → CH<sub>4</sub></li>
+        <li>Footnotes → Term<sup>*</sup></li>
+    </ul>
+
+    <p><strong>Example HTML Code:</strong></p>
+    <pre><code>
+H&lt;sub&gt;2&lt;/sub&gt;O → H<sub>2</sub>O<br>
+CO&lt;sub&gt;2&lt;/sub&gt; → CO<sub>2</sub><br>
+5&lt;sup&gt;2&lt;/sup&gt; = 25<br>
+X&lt;sup&gt;n&lt;/sup&gt; = Power of n
+    </code></pre>
+
+    <button class="next-button" onclick="location.href='superscript-quiz.html'">HANDS-ON ➡️</button>
+</div>
+
+
+
+<div class="section">
+    <h2>📋 Lists and Nested Lists</h2>
+    <ul>
+        <li><strong>Unordered List</strong> <code>&lt;ul&gt;</code>: Bullet points.</li>
+        <li><strong>Ordered List</strong> <code>&lt;ol&gt;</code>: Numbered list.</li>
+    </ul>
+    <p><em>Real-life Example:</em> A grocery list with sub-categories (nested lists).</p>
+</div>
+
+<div class="section">
+    <h2>📏 Inline vs Block Elements</h2>
+    <p><strong>Inline:</strong> Flows with text (e.g., <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>).<br>
+    <strong>Block:</strong> Takes full width, starts on new line (e.g., <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>).</p>
+    <p><em>Real-life Example:</em> Inline = words in a sentence, Block = a paragraph or box below.</p>
+</div>
+
+<div class="section">
+    <h2>🔗 Hyperlinks</h2>
+    <p>Clickable links that take users to other websites or sections.</p>
+    <p><em>Real-life Example:</em> Clicking a WhatsApp profile link to open chat.</p>
+</div>
+
+<div class="section">
+    <h2>🖼️ Images</h2>
+    <p>Use <code>&lt;img&gt;</code> to display pictures.</p>
+    <p><em>Real-life Example:</em> Your profile picture is shown using an image tag.</p>
+</div>
+
+<div class="section">
+    <h2>📊 Tables</h2>
+    <p>Organize data into rows and columns.</p>
+    <p><em>Real-life Example:</em> A school timetable or restaurant price list.</p>
+    <pre><code>&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Alice&lt;/td&gt;&lt;td&gt;25&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</div>
+
+<div class="section">
+    <h2>📝 HTML Forms</h2>
+    <p>Collect information from users using forms.</p>
+    <p><em>Real-life Example:</em> Filling your details for an online event or login page.</p>
+    <pre><code>&lt;form&gt;
+  &lt;input type="text" placeholder="Your Name"&gt;
+  &lt;input type="email" placeholder="Your Email"&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+<script>
+const demoArea = document.getElementById("demo-area");
+const styleTag = document.getElementById("dynamic-style");
+
+function showHTML() {
+    styleTag.innerHTML = "";
+    demoArea.innerHTML = `
+        <h2 style="all: unset;">Heading Example</h2>
+        <p style="all: unset;">Plain paragraph without any style.</p>
+        <button style="all: unset;">Click Me</button>
+        <p><em>No color, no design applied.</em></p>
+    `;
+}
+
+function showCSS() {
+    showHTML();
+    styleTag.innerHTML = `
+        #demo-area h2 { color: darkblue; }
+        #demo-area p { color: green; font-style: italic; }
+        #demo-area button {
+            background-color: orange;
+            color: white;
+            padding: 8px;
+            border: none;
+            cursor: pointer;
+        }
+    `;
+}
+
+function showJS() {
+    showCSS();
+    const btn = demoArea.querySelector("button");
+    btn.addEventListener("click", () => alert("You clicked the button! JavaScript is working."));
+}
+</script>
+
+</body>
+</html>
