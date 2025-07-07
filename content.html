@@ -159,6 +159,8 @@
     </ul>
 
     <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" class="mdn-link" target="_blank">Explore all HTML Text Elements on MDN</a></p>
+     <button class="next-button" onclick="location.href='text-styling-quiz.html'">HANDS-ON ➡️</button>
+
 </div>
 
 
@@ -241,20 +243,254 @@ X&lt;sup&gt;n&lt;/sup&gt; = Power of n
 
 
 <div class="section">
-    <h2>📋 Lists and Nested Lists</h2>
+    <h2>📌 List Item - &lt;li&gt; Tag</h2>
+    
+    <p>The <code>&lt;li&gt;</code> tag is used to define a <strong>List Item</strong>. It represents each item within an <code>&lt;ul&gt;</code> (unordered list) or <code>&lt;ol&gt;</code> (ordered list).</p>
+
+    <p><em>Real-life Example:</em> Imagine writing items on a piece of paper for a shopping list or steps for a recipe. Each item or step is like a list item, represented in HTML using <code>&lt;li&gt;</code>.</p>
+
+    <p><strong>Syntax Example:</strong></p>
+    <pre><code>
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;Step 1&lt;/li&gt;
+    &lt;li&gt;Step 2&lt;/li&gt;
+&lt;/ol&gt;
+    </code></pre>
+
+    <p><strong>Important:</strong> The <code>&lt;li&gt;</code> tag <u>must</u> be placed inside <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>. It cannot exist on its own.</p>
+
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li" target="_blank" class="mdn-link">MDN Docs - List Item (&lt;li&gt;)</a></p>
+
     <ul>
-        <li><strong>Unordered List</strong> <code>&lt;ul&gt;</code>: Bullet points.</li>
-        <li><strong>Ordered List</strong> <code>&lt;ol&gt;</code>: Numbered list.</li>
+        <li>
+            <strong>Unordered List ( <code>&lt;ul&gt;</code> ):</strong>
+            <p>Used when the order of items doesn't matter. Items appear with bullet points.</p>
+            <p><em>Real-life Example:</em> Shopping List, To-Do tasks, Features list,Grocery items, Features of a product, Checklist before travelling</p>
+            <p><strong>Code Example:</strong></p>
+            <code>
+&lt;ul&gt;<br>
+    &lt;li&gt;Milk&lt;/li&gt;<br>
+    &lt;li&gt;Bread&lt;/li&gt;<br>
+    &lt;li&gt;Eggs&lt;/li&gt;<br>
+&lt;/ul&gt;
+            </code>
+            <p><strong>Output:</strong></p>
+            <ul>
+                <li>Milk</li>
+                <li>Bread</li>
+                <li>Eggs</li>
+            </ul>
+        </li>
+
+        <br>
+
+        <li>
+            <strong>Ordered List ( <code>&lt;ol&gt;</code> ):</strong>
+            <p>Used when the order of items matters. Items appear with numbers.</p>
+            <p><em>Real-life Example:</em> Steps to follow in a recipe, Ranking of players, Task priorities,Instruction manual, Ranking system</p>
+            <p><strong>Code Example:</strong></p>
+            <code>
+&lt;ol&gt;<br>
+    &lt;li&gt;Preheat the oven&lt;/li&gt;<br>
+    &lt;li&gt;Mix the ingredients&lt;/li&gt;<br>
+    &lt;li&gt;Bake the cake&lt;/li&gt;<br>
+&lt;/ol&gt;
+            </code>
+            <p><strong>Output:</strong></p>
+            <ol>
+                <li>Preheat the oven</li>
+                <li>Mix the ingredients</li>
+                <li>Bake the cake</li>
+            </ol>
+        </li>
     </ul>
-    <p><em>Real-life Example:</em> A grocery list with sub-categories (nested lists).</p>
+
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul" target="_blank" class="mdn-link">MDN Docs - Unordered List</a></p>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol" target="_blank" class="mdn-link">MDN Docs - Ordered List</a></p>
+
+    <h2>🧩 Nested Lists</h2>
+
+    <p><strong>Nested Lists</strong> are lists inside lists. You can nest unordered within ordered, ordered within unordered, or multiple levels of the same type.</p>
+
+    <p><em>Real-life Example:</em></p>
+    <ul>
+        <li>Grocery List
+            <ul>
+                <li>Fruits
+                    <ul>
+                        <li>Apples</li>
+                        <li>Bananas</li>
+                    </ul>
+                </li>
+                <li>Vegetables</li>
+                <li>Dairy</li>
+            </ul>
+        </li>
+    </ul>
+
+    <p><strong>Code Example:</strong></p>
+    <code>
+&lt;ul&gt;<br>
+&nbsp;&nbsp;&lt;li&gt;Grocery List&lt;/li&gt;<br>
+&nbsp;&nbsp;&lt;ul&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Fruits&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Apples&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Bananas&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Vegetables&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Dairy&lt;/li&gt;<br>
+&nbsp;&nbsp;&lt;/ul&gt;<br>
+&lt;/ul&gt;
+    </code>
+
+    <p><strong>Another Example (Ordered List inside Unordered List):</strong></p>
+    <code>
+&lt;ul&gt;<br>
+&nbsp;&nbsp;&lt;li&gt;Steps to Prepare Tea&lt;/li&gt;<br>
+&nbsp;&nbsp;&lt;ol&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Boil water&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Add tea leaves&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Pour milk&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Serve&lt;/li&gt;<br>
+&nbsp;&nbsp;&lt;/ol&gt;<br>
+&lt;/ul&gt;
+    </code>
+
+    <p><strong>Output:</strong></p>
+    <ul>
+        <li>Steps to Prepare Tea
+            <ol>
+                <li>Boil water</li>
+                <li>Add tea leaves</li>
+                <li>Pour milk</li>
+                <li>Serve</li>
+            </ol>
+        </li>
+    </ul>
+    <button class="next-button" onclick="location.href='lists-quiz.html'">HANDS-ON ➡️</button>
+
 </div>
 
+
+
 <div class="section">
-    <h2>📏 Inline vs Block Elements</h2>
-    <p><strong>Inline:</strong> Flows with text (e.g., <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>).<br>
-    <strong>Block:</strong> Takes full width, starts on new line (e.g., <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>).</p>
-    <p><em>Real-life Example:</em> Inline = words in a sentence, Block = a paragraph or box below.</p>
+    <h2>📏 Inline vs Block Elements (Detailed Explanation)</h2>
+
+    <p>
+        <strong>Inline Elements:</strong> These elements stay within the same line of text. They do not force a line break, meaning the content before and after them remains on the same line.
+    </p>
+
+    <p><strong>Real-life Example:</strong> Imagine highlighting a single word in a sentence without disturbing the sentence flow — just like using a highlighter in your book.</p>
+
+    <p><strong>Example Code (Inline Element with &lt;span&gt;):</strong></p>
+    <code>
+I love &lt;span style="color:red;"&gt;HTML&lt;/span&gt; and &lt;span style="color:green;"&gt;CSS&lt;/span&gt; development.
+    </code>
+
+    <p><strong>Output:</strong></p>
+    <p>
+        I love <span style="color:red;">HTML</span> and <span style="color:green;">CSS</span> development.
+    </p>
+
+    <p>
+        As you see, the words <strong>HTML</strong> and <strong>CSS</strong> are styled but stay in the same line as the rest of the sentence. That's the behavior of Inline elements.
+    </p>
+
+    <hr>
+
+    <p>
+        <strong>Block Elements:</strong> These elements always start on a new line, no matter where you place them in the code. They take up the full available width by default.
+    </p>
+
+    <p><strong>Real-life Example:</strong> Think of paragraphs or headings. Even if you write them side by side in your code, they will appear one below the other on the webpage.</p>
+
+    <p><strong>Example Code (Block Elements):</strong></p>
+    <code>
+&lt;p&gt;This is the first paragraph.&lt;/p&gt;&lt;p&gt;This is the second paragraph.&lt;/p&gt;
+    </code>
+
+    <p><strong>Output:</strong></p>
+    <p>This is the first paragraph.</p>
+    <p>This is the second paragraph.</p>
+
+    <p>
+        Even though the two <code>&lt;p&gt;</code> tags are written side by side in the code, the output displays them on separate lines. That's because <strong>&lt;p&gt;</strong> is a block-level element.
+    </p>
+
+    <hr>
+
+    <h3>Quick Comparison:</h3>
+    <ul>
+        <li><strong>Inline Elements:</strong> Stay in the same line </li>
+        <li><strong>Block Elements:</strong> Start on a new line, take full width </li>
+    </ul>
+    <h3>Inline vs Block Elements:</h3>
+    <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+        <thead style="background: #f0f0f0;">
+            <tr>
+                <th>Inline Elements</th>
+                <th>Block Elements</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt;span&gt; - Generic container inline</td>
+                <td>&lt;div&gt; - Generic container block</td>
+            </tr>
+            <tr>
+                <td>&lt;a&gt; - Anchor/Link</td>
+                <td>&lt;p&gt; - Paragraph</td>
+            </tr>
+            <tr>
+                <td>&lt;strong&gt; - Important text (bold)</td>
+                <td>&lt;h1&gt; to &lt;h6&gt; - Headings</td>
+            </tr>
+            <tr>
+                <td>&lt;b&gt; - Bold text (style only)</td>
+                <td>&lt;ul&gt;, &lt;ol&gt; - Lists</td>
+            </tr>
+            <tr>
+                <td>&lt;i&gt; - Italic (style only)</td>
+                <td>&lt;li&gt; - List items (block by default)</td>
+            </tr>
+            <tr>
+                <td>&lt;em&gt; - Emphasis text (italic with meaning)</td>
+                <td>&lt;section&gt;, &lt;article&gt; - Structural blocks</td>
+            </tr>
+            <tr>
+                <td>&lt;img&gt; - Images</td>
+                <td>&lt;header&gt;, &lt;footer&gt;, &lt;nav&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;input&gt; - Form fields (varies but mostly inline)</td>
+                <td>&lt;form&gt; - Complete form block</td>
+            </tr>
+            <tr>
+                <td>&lt;button&gt; - Button (can behave inline-block)</td>
+                <td>&lt;table&gt; - Table block</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements" target="_blank" class="mdn-link">MDN: Block-level Elements</a><br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements" target="_blank" class="mdn-link">MDN: Inline Elements</a>
+    </p>
 </div>
+
+
+
+
+
+
+
+
 
 <div class="section">
     <h2>🔗 Hyperlinks</h2>
@@ -296,15 +532,18 @@ const styleTag = document.getElementById("dynamic-style");
 function showHTML() {
     styleTag.innerHTML = "";
     demoArea.innerHTML = `
-        <h2 style="all: unset;">Heading Example</h2>
-        <p style="all: unset;">Plain paragraph without any style.</p>
-        <button style="all: unset;">Click Me</button>
-        <p><em>No color, no design applied.</em></p>
+        <h2 style="all: unset;">Welcome to My Website</h2>
+        <p style="all: unset;">This is a basic structure using only HTML. No styles or behavior applied.</p>
+        <button style="all: unset;">Plain Button (No Action)</button>
     `;
 }
 
 function showCSS() {
-    showHTML();
+    demoArea.innerHTML = `
+        <h2>Stylish Website</h2>
+        <p>Now we added CSS! Text looks better, layout is improved.</p>
+        <button id="styled-btn">Styled Button</button>
+    `;
     styleTag.innerHTML = `
         #demo-area h2 { color: darkblue; }
         #demo-area p { color: green; font-style: italic; }
@@ -314,15 +553,34 @@ function showCSS() {
             padding: 8px;
             border: none;
             cursor: pointer;
+            border-radius: 4px;
         }
     `;
 }
 
 function showJS() {
-    showCSS();
-    const btn = demoArea.querySelector("button");
-    btn.addEventListener("click", () => alert("You clicked the button! JavaScript is working."));
+    demoArea.innerHTML = `
+        <h2>Interactive Website</h2>
+        <p>We added JavaScript! Click the button to see interaction.</p>
+        <button id="interactive-btn">Click Me</button>
+    `;
+    styleTag.innerHTML = `
+        #demo-area h2 { color: darkblue; }
+        #demo-area p { color: green; font-style: italic; }
+        #demo-area button {
+            background-color: orange;
+            color: white;
+            padding: 8px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    `;
+
+    const btn = demoArea.querySelector("#interactive-btn");
+    btn.addEventListener("click", () => alert("JavaScript is working! 🎉"));
 }
+
 </script>
 
 </body>

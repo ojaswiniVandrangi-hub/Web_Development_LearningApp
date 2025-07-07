@@ -2,68 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Superscript & Subscript Quiz</title>
+  <title>Superscript & Subscript Practice</title>
   <style>
     body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-        background: #eef5fb;
-        color: #333;
-    }
-    h1 {
-        color: #2c3e50;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f8ff;
+      color: #333;
     }
     textarea {
-        width: 100%;
-        height: 250px;
-        margin-top: 10px;
-        font-family: monospace;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        background: #fff;
-        box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+      width: 100%;
+      height: 250px;
+      margin-top: 10px;
+      font-family: monospace;
     }
     .btn {
-        margin: 10px 5px 0 0;
-        padding: 12px 20px;
-        background: #3498db;
-        color: white;
-        border: none;
-        cursor: pointer;
-        border-radius: 6px;
-        transition: background-color 0.3s, transform 0.2s;
-        font-weight: bold;
+      margin: 10px 5px;
+      padding: 10px 20px;
+      background: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
     }
     .btn:hover {
-        background: #2980b9;
-        transform: scale(1.05);
+      background: #2980b9;
     }
     .output, .score-area, .correct-answers {
-        margin-top: 20px;
-        padding: 15px;
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .output iframe {
-        border: 1px solid #ccc;
-        border-radius: 4px;
+      margin-top: 20px;
+      padding: 15px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
     code {
-        background: #f5f5f5;
-        padding: 3px 6px;
-        display: inline-block;
-        border-radius: 4px;
+      background: #eee;
+      padding: 2px 5px;
+      display: block;
+      margin-top: 5px;
     }
-</style>
-
+  </style>
 </head>
 <body>
 
 <h1>📝 Superscript & Subscript Practice Quiz</h1>
 
-<p>Complete the following tasks by writing valid HTML code inside the full structure below:</p>
+<p>Write valid HTML to complete these tasks:</p>
 
 <ol>
   <li>Display <strong>H<sub>2</sub>O</strong></li>
@@ -79,21 +63,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Practice Superscript & Subscript</title>
+  <title>Superscript & Subscript Practice</title>
 </head>
 <body>
 
-<!-- Write your code below this line -->
+<!-- Your code starts here -->
 
 
 
-<!-- End of your code -->
+<!-- Your code ends here -->
 
 </body>
 </html>
 </textarea>
 
 <button class="btn" onclick="checkAnswers()">Check Your Score</button>
+<button class="btn" onclick="showOutput()">Show Output</button>
 <button class="btn" onclick="showCorrectAnswers()">Show Correct Answers</button>
 
 <div class="output">
@@ -107,23 +92,42 @@
 
 <script>
 function checkAnswers() {
-  const textarea = document.getElementById('code-area').value;
-  const preview = document.getElementById('preview').contentWindow.document;
-  preview.open();
-  preview.write(textarea);
-  preview.close();
-
+  const textarea = document.getElementById('code-area').value.toLowerCase();
   let score = 0;
-  const lower = textarea.toLowerCase();
 
-  if (lower.includes('h<sub>2</sub>o')) score++;
-  if (lower.includes('5<sup>2</sup>')) score++;
-  if (lower.includes('e = mc<sup>2</sup>')) score++;
-  if (lower.includes('co<sub>2</sub>')) score++;
-  if (lower.includes('area = πr<sup>2</sup>')) score++;
+  if (textarea.includes('h<sub>2</sub>o')) score++;
+  if (textarea.includes('5<sup>2</sup>')) score++;
+  if (textarea.includes('e = mc<sup>2</sup>')) score++;
+  if (textarea.includes('co<sub>2</sub>')) score++;
+  if (textarea.includes('area = πr<sup>2</sup>')) score++;
 
   const percentage = (score / 5) * 100;
   document.getElementById('score-area').innerHTML = `<h3>Your Score: ${percentage}%</h3>`;
+}
+
+function showOutput() {
+  const textarea = document.getElementById('code-area').value.trim();
+  const preview = document.getElementById('preview').contentWindow.document;
+
+  const bodyMatch = textarea.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+  const bodyContent = bodyMatch ? bodyMatch[1].trim() : "";
+
+  const tagPattern = /<\s*\w+.*?>.*?<\s*\/\s*\w+\s*>/s;
+
+  preview.open();
+  if (tagPattern.test(bodyContent)) {
+    const fullHTML = `
+      <!DOCTYPE html>
+      <html>
+      <head><title>Preview</title></head>
+      <body>${bodyContent}</body>
+      </html>
+    `;
+    preview.write(fullHTML);
+  } else {
+    preview.write("<!DOCTYPE html><html><body></body></html>");
+  }
+  preview.close();
 }
 
 function showCorrectAnswers() {
