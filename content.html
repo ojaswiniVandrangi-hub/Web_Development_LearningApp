@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0058)file:///C:/Users/ojasw/OneDrive/Desktop/pages/content.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <title>HTML Basics - Web Development</title>
 <style id="dynamic-style"></style>
 <style>
@@ -57,10 +57,100 @@
     a.mdn-link:hover {
         text-decoration: underline;
     }
+     .accordion {
+      margin: 20px auto;
+      max-width: 800px;
+    }
+
+    .accordion-item {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .accordion-header {
+      background: #3498db;
+      color: white;
+      padding: 15px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 15px;
+      background: #ecf0f1;
+    }
+    .accordion-header .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-header.active .arrow {
+      transform: rotate(90deg); /* Right arrow to down arrow */
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 15px;
+      background: #ecf0f1;
+    }
+
+    .accordion-content.active {
+      display: block;
+    }
+  .collapsible-section {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+  }
+
+  .collapsible-header {
+    cursor: pointer;
+    padding: 12px 16px;
+    background-color: #e2e8f0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  .arrow {
+    margin-right: 8px;
+    font-size: 14px;
+  }
+
+  .collapsible-content {
+    display: none;
+    padding: 12px 16px;
+    border-top: 1px solid #ccc;
+    background-color: #ffffff;
+  }
+
+  .collapsible-content.show {
+    display: block;
+  }
+
+  
+
 </style>
 
 </head>
 <body>
+    
+  <!-- HTML Section -->
+  <!-- <div class="accordion-item">
+    <div class="accordion-header">HTML</div>
+    <div class="accordion-content active"> -->
+        <!-- <button class="collapsible">HTML</button> -->
+        <!-- <div class="content"    > -->
+            <div class="collapsible-section">
+    <div class="collapsible-header">
+      <span class="arrow">▼</span> HTML
+    </div>
+    <div class="collapsible-content show">
 
 <h1>📘 HTML Basics - Web Development</h1>
 
@@ -121,9 +211,9 @@
 <div class="section">
     <h2>💬 HTML Comments</h2>
     <p>Comments describe your code but don't show on the website.</p>
-    <p><em>Imagine you're writing a recipe in a notebook, and you add personal notes like "Mom's favorite dish" or "Use less salt if needed" — these notes are for your reference only and aren't part of the final dish itself. Similarly, HTML comments are for the developer's reference and aren't visible to the website user.</p>
+    <p><em>Imagine you're writing a recipe in a notebook, and you add personal notes like "Mom's favorite dish" or "Use less salt if needed" — these notes are for your reference only and aren't part of the final dish itself. Similarly, HTML comments are for the developer's reference and aren't visible to the website user.</em></p><em>
     <p>Example: <code>&lt;!-- This is a comment --&gt;</code></p>
-</div>
+</em></div><em>
 
 <div class="section">
     <h2>🅱️ Strong, Bold, Emphasis, Italic Elements</h2>
@@ -159,7 +249,7 @@
     </ul>
 
     <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" class="mdn-link" target="_blank">Explore all HTML Text Elements on MDN</a></p>
-     <button class="next-button" onclick="location.href='text-styling-quiz.html'">HANDS-ON ➡️</button>
+     <button class="next-button" onclick="location.href=&#39;text-styling-quiz.html&#39;">HANDS-ON ➡️</button>
 
 </div>
 
@@ -191,13 +281,13 @@
 
     <p>
         In the above example:
-        <ul>
+        </p><ul>
             <li>The <code>&lt;html&gt;</code> element is the parent that wraps everything.</li>
             <li>Inside <code>&lt;html&gt;</code>, we have two nested elements — <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code>.</li>
             <li>Further inside <code>&lt;head&gt;</code>, the <code>&lt;title&gt;</code> is nested.</li>
             <li>Inside <code>&lt;body&gt;</code>, we nest other elements like <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code>.</li>
         </ul>
-    </p>
+    <p></p>
 
     <p><em>Real-life Example:</em> Think of a tiffin box. The large box holds smaller containers inside it — rice in one, curry in another. Similarly, HTML elements sit inside parent elements to stay organized.</p>
 
@@ -237,7 +327,7 @@ CO&lt;sub&gt;2&lt;/sub&gt; → CO<sub>2</sub><br>
 X&lt;sup&gt;n&lt;/sup&gt; = Power of n
     </code></pre>
 
-    <button class="next-button" onclick="location.href='superscript-quiz.html'">HANDS-ON ➡️</button>
+    <button class="next-button" onclick="location.href=&#39;superscript-quiz.html&#39;">HANDS-ON ➡️</button>
 </div>
 
 
@@ -373,7 +463,7 @@ X&lt;sup&gt;n&lt;/sup&gt; = Power of n
             </ol>
         </li>
     </ul>
-    <button class="next-button" onclick="location.href='lists-quiz.html'">HANDS-ON ➡️</button>
+    <button class="next-button" onclick="location.href=&#39;lists-quiz.html&#39;">HANDS-ON ➡️</button>
 
 </div>
 
@@ -523,6 +613,188 @@ I love &lt;span style="color:red;"&gt;HTML&lt;/span&gt; and &lt;span style="colo
   &lt;input type="email" placeholder="Your Email"&gt;
   &lt;button type="submit"&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</code></pre>
+
+</div>
+</em></div><em>
+</em></div><em>
+<div class="collapsible-section">
+  <div class="collapsible-header">
+    <span class="arrow">▼</span> CSS
+  </div>
+  <div class="collapsible-content show">
+    <p>Content will be updated soon.</p>
+  </div>
+</div>
+<div class="collapsible-section">
+  <div class="collapsible-header">
+    <span class="arrow">▼</span> JavaScript
+  </div>
+  <div class="collapsible-content show">
+  <p>Content will be updated soon.</p>
+  </div>
+</div>
+<div class="collapsible-section">
+  <div class="collapsible-header">
+    <span class="arrow">▼</span> React.js
+  </div>
+  <div class="collapsible-content show">
+    
+     <div style="padding: 20px; background-color: #f9f9f9; border-radius: 10px; border: 1px solid #ccc; font-family: sans-serif;">
+
+  <h2 style="color: #d63384;">React Introduction</h2>
+  <p>React is an open source library, developed and maintained by the developers of Facebook, Instagram and also a larger community of contributors.</p>
+  <p>React helps in developing a large scale, single page applications easier.</p>
+  <p>It is a declarative, efficient and flexible JavaScript library for building UI's</p>
+  <p>React supports all syntaxes of ECMA script 2015/ES6</p>
+  <p>React can perform Client Side as well as Server Side Rendering.</p>
+  <p>Now, I know most of you must got doubt about what is client side rendering? What is server side rendering? Let's look into it deeper</p>
+
+  <h2 style="color: #0d6efd;">Client Side Rendering:</h2>
+  <p>The browser(client) loads a basic HTML page first and then uses JavaScript to fetch and render the content</p>
+
+  <h4>Real Life Example:</h4>
+  <p>Imagine you are craving for pizza. We have 2 ways. The first way will be followed by the one who is more health conscious like me. Get all the ingredients from the store like pizza base, cheese, sauces, veggies for topings and make pizza with all the ingredients. Now in this scenario, initially we can see all the ingredients and then after a functionality got added(i.e; baking pizza) the perfect pizza we craved for is just before us. Consider baking pizza as adding javascript to the page.</p>
+
+  <h4>How it works:</h4>
+  <p>Initially, Browser loads a minimal HTML file with JS</p>
+  <p>JS framework like React, Angular, Vue etc. will run in the browser, fetch data from APIs and dynamically build the page</p>
+  <p>This is like loading a web page where your browser builds the content using JS after loading blank page</p>
+
+  <p><strong>Live app example:</strong> Facebook, Gmail, Netflix</p>
+
+  <h4>Justification:</h4>
+  <p>When you open Facebook/Gmail you will notice the layout loads first (like the header, sidebar) and actual content like posts, notifications and messages load after a delay</p>
+
+  <h2 style="color: #0d6efd;">Server Side Rendering:</h2>
+  <p>The server generates the complete HTML content of the page and sends it back to the browser.</p>
+
+  <h4>Real life Example:</h4>
+  <p>Now, think of the pizza you craved for is store bought. No need to bake. You will get the sight of pizza as you want without delay. This is server side rendering. This is like loading a web page where the server sends full content and see it immediately in the browser.</p>
+
+  <h4>How it Works:</h4>
+  <p>A request is sent to the server</p>
+  <p>The server renders the full content with all the data</p>
+  <p>The browser displays the fully populated page.</p>
+
+  <h4>Live App Example:</h4>
+  <p>Amazon</p>
+
+  <h4>Justification:</h4>
+  <p>When you search for a product in Amazon, or open a product page, the entire content is already there in the HTML when the page loads.</p>
+  <p>Even if we turn off JS, still you can see the product details.</p>
+
+  <p>Simple: if you want your page to behave static, go for server side rendering. If you want your page to behave dynamic, go for client side rendering.</p>
+
+  <h2 style="color: #d63384;">Functions:</h2>
+  <p>In React, we can categorize functions in 2 types: 1) Pure functions and 2) Impure functions.</p>
+
+  <h4>Pure Functions:</h4>
+  <p>The function that returns the same result when the function callback with same argument at multiple times. Hence, it is pure.</p>
+  <pre style="background-color: #eee; padding: 10px;"><code>function sum(a, b) {
+  return a + b;
+}
+console.log(sum(2 + 3)); // output: 5
+console.log(sum(2 + 3)); // output: 5</code></pre>
+  <p>In both cases, when we pass same arguments into the function, output is same. So, this kind of functions are pure</p>
+
+  <h4>Impure Functions:</h4>
+  <p>The function may not return the same result when the function callback with same argument at multiple times. Hence, it is impure.</p>
+  <pre style="background-color: #eee; padding: 10px;"><code>var sum = 0;
+function sum(a, b) {
+  return sum = sum + value;
+}
+console.log(sum(2)); // output: 2
+console.log(sum(2)); // output: 4</code></pre>
+  <p>In both cases, when we pass same arguments into the function, output different. So, this kind of functions are impure</p>
+
+  <h2 style="color: #d63384;">Virtual DOM</h2>
+  <p>To create dynamic UIs, relying on traditional DOM wasn't an optimized solution.</p>
+
+  <h4>Real-life Example:</h4>
+  <p>Imagine you are maintaining a board displaying 10 notes pinned on it. If you want to update just 1 note, the DOM forces you to erase and rewrite all 10 notes again — even though only 1 changed. This is inefficient.</p>
+  <p>In web terms, DOM re-renders the entire list even if one item changes, which is resource-heavy.</p>
+  <p>This inefficiency is solved using the Virtual DOM.</p>
+
+  <p>The Virtual DOM is a lightweight, in-memory representation of the real DOM. When a change occurs, it updates only the changed part — not the entire structure — and then syncs it with the actual DOM efficiently.</p>
+
+  <h4>Real-life Analogy:</h4>
+  <p>Consider a painter who maintains a sketch version (Virtual DOM) of their final artwork (Real DOM). If a change is needed, they modify the sketch first, analyze the changes, and only apply what's required on the final artwork — saving time and resources.</p>
+
+  <p><strong>Used By:</strong> Facebook, Apple, PayPal</p>
+
+  <h4>Comparison Table: DOM vs Virtual DOM</h4>
+  <table style="width: 100%; border-collapse: collapse;">
+    <tr style="background-color: #dee2e6;">
+      <th style="border: 1px solid #999; padding: 8px;">Feature</th>
+      <th style="border: 1px solid #999; padding: 8px;">DOM</th>
+      <th style="border: 1px solid #999; padding: 8px;">Virtual DOM</th>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #999; padding: 8px;">Definition</td>
+      <td style="border: 1px solid #999; padding: 8px;">Represents the actual structure of the document loaded in the browser.</td>
+      <td style="border: 1px solid #999; padding: 8px;">Lightweight JavaScript copy of the real DOM maintained in memory.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #999; padding: 8px;">Update Speed</td>
+      <td style="border: 1px solid #999; padding: 8px;">Slow, updates entire tree.</td>
+      <td style="border: 1px solid #999; padding: 8px;">Faster, updates only changed nodes.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #999; padding: 8px;">Efficiency</td>
+      <td style="border: 1px solid #999; padding: 8px;">Low performance on frequent updates.</td>
+      <td style="border: 1px solid #999; padding: 8px;">High performance due to selective updates.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #999; padding: 8px;">Used In</td>
+      <td style="border: 1px solid #999; padding: 8px;">Traditional web development.</td>
+      <td style="border: 1px solid #999; padding: 8px;">Modern libraries like React.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #999; padding: 8px;">Rendering</td>
+      <td style="border: 1px solid #999; padding: 8px;">Direct manipulation of real DOM.</td>
+      <td style="border: 1px solid #999; padding: 8px;">Changes applied in memory first, then synced.</td>
+    </tr>
+  </table>
+
+  <h2 style="color: #d63384;">Features of React</h2>
+
+  <h4>1. Components</h4>
+  <p>React applications are built using components. A component is an independent, reusable block of UI, like a Lego brick. Each component can have its own logic and appearance.</p>
+  <p><strong>Real-life Analogy:</strong> A car built from parts (components). Wheels, engine, seats can be reused.</p>
+  <p><strong>Types of Components:</strong></p>
+  <ul>
+    <li>Functional Components – functions that return JSX</li>
+    <li>Class Components – ES6 classes with state and lifecycle methods (less common now)</li>
+  </ul>
+  <pre style="background-color: #eee; padding: 10px;"><code>function Welcome(props) {
+  return &lt;h1&gt;Hello, {props.name}!&lt;/h1&gt;;
+}</code></pre>
+
+  <h4>2. JSX (JavaScript XML)</h4>
+  <p>JSX is a syntax extension that allows you to write HTML-like code within JavaScript.</p>
+  <p><strong>Analogy:</strong> Chocolate chips (HTML) in cookie dough (JavaScript).</p>
+  <pre style="background-color: #eee; padding: 10px;"><code>// With JSX
+const element = &lt;h1&gt;Welcome to React!&lt;/h1&gt;;</code></pre>
+  <pre style="background-color: #eee; padding: 10px;"><code>// Without JSX
+const element = React.createElement('h1', null, 'Welcome to React!');</code></pre>
+
+  <h4>3. Transpiling</h4>
+  <p>JSX cannot be understood by browsers directly. Tools like Babel are used to convert JSX into standard JavaScript — this process is called transpiling.</p>
+  <p><strong>Example:</strong></p>
+  <pre style="background-color: #eee; padding: 10px;"><code>// JSX
+const greeting = &lt;h1&gt;Hello, world!&lt;/h1&gt;;
+
+// Transpiled JS
+const greeting = React.createElement('h1', null, 'Hello, world!');</code></pre>
+
+  <h4>4. Abstract Syntax Tree (AST)</h4>
+  <p>During transpilation, JSX is first parsed into an Abstract Syntax Tree (AST). AST is a tree representation of your code’s syntax.</p>
+  <p>Babel uses AST to understand code structure and apply transformations.</p>
+  <p><strong>Analogy:</strong> Think of AST as a blueprint of a building. Architects (Babel) can modify it before real construction (JS code execution).</p>
+
+</div>
+
+  </div>
 </div>
 
 <script>
@@ -580,8 +852,31 @@ function showJS() {
     const btn = demoArea.querySelector("#interactive-btn");
     btn.addEventListener("click", () => alert("JavaScript is working! 🎉"));
 }
+ const headers = document.querySelectorAll(".accordion-header");
 
+  headers.forEach(header => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling;
+      const arrow = header.querySelector(".arrow");
+
+      content.classList.toggle("active");
+      header.classList.toggle("active");
+    });
+  });
+  function toggleSection(header) {
+      header.classList.toggle('active');
+    }
+     document.querySelectorAll(".collapsible-header").forEach(header => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling;
+      const arrow = header.querySelector(".arrow");
+
+      content.classList.toggle("show");
+      arrow.textContent = content.classList.contains("show") ? "▼" : "▶";
+    });
+  });
 </script>
 
-</body>
-</html>
+
+
+</em></body></html>
